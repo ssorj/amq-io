@@ -94,6 +94,7 @@ inner_template: none
           <a href="">Get started</a>
           <a href="">Container image</a>
           <a href="https://activemq.apache.org/artemis/download.html">Download</a>
+          <a href="">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -125,6 +126,7 @@ inner_template: none
           <a href="https://kafka.apache.org/quickstart">Get started</a>
           <a href="https://hub.docker.com/r/strimzi/kafka/">Container image</a>
           <a href="https://kafka.apache.org/downloads">Download</a>
+          <a href="">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -158,6 +160,7 @@ inner_template: none
           <a href="">Container image</a>
           <a href="http://qpid.apache.org/packages.html">Linux packages</a>
           <a href="http://qpid.apache.org/download.html#messaging-servers">Download</a>
+          <a href="">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -189,6 +192,7 @@ inner_template: none
           <a href="">Get started</a>
           <a href="">Container image</a>
           <a href="http://enmasse.io/downloads">Download</a>
+          <a href="">Red Hat support</a>
         </nav>
       </div>
     </div>
