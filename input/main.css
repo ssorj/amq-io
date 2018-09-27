@@ -255,6 +255,12 @@ section#-intro-section h1 {
     font-size: 3em;
 }
 
+section#-intro-section > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 section#-intro-section > div > p {
     font-size: 1.4em;
     font-weight: 300;
@@ -272,7 +278,60 @@ section#-intro-section > div > p {
     margin-right: auto;
 }
 
+header > div {
+    display: flex;
+    align-items: center;
+}
+
 #-features > div {
     background-color: #444;
     padding: 1.5em 2em;
+}
+
+#-top-right-nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+#-features-2 {
+    display: flex;
+    align-items: top;
+    margin: 2.5em 0 1em 0;
+}
+
+#-features-2 > ul {
+    font-size: 1.1em;
+    font-weight: 600;
+    list-style: none;
+    padding: 0;
+    margin: 0 4em 0 0;
+}
+
+#-features-2 > ul > li {
+    margin-bottom: 1em;
+}
+
+#-features-2 > ul > li:last-child {
+    margin-bottom: 0;
+}
+
+#-features-2 > nav {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0;
+}
+
+#-features-2 > nav > a {
+    display: block;
+    margin-bottom: 1.5em;
+    padding: 0.8em 1em;
+    background-color: #33c;
+    color: white;
+    font-weight: 600;
+    border-radius: 0.4em;
+    text-align: center;
+}
+
+#-features-2 > nav > a:last-child {
+    margin-bottom: 0;
 }
