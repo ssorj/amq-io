@@ -4,7 +4,7 @@ export PYTHONPATH := python
 render: site_url := "file:${PWD}/output"
 render: clean
 	python3 -m transom --quiet render --force --site-url ${site_url} input output
-	python3 -m transom --quiet render --force --site-url "https://www.ssorj.net/amqp-directory" input docs
+	python3 -m transom --quiet render --force --site-url "https://www.ssorj.net/amq-io" input docs
 	@echo "See the output at ${site_url}/index.html"
 
 .PHONY: clean
