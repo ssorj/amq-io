@@ -94,7 +94,7 @@ inner_template: none
           <a href="">Get started</a>
           <a href="">Container image</a>
           <a href="https://activemq.apache.org/artemis/download.html">Download</a>
-          <a href="">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -103,7 +103,7 @@ inner_template: none
 
 <section id="-kafka-section">
   <div>
-    <h2>Message streaming with <a href="http://strimzi.io/">Strimzi</a> and <a href="https://kafka.apache.org/">Apache Kafka</a></h2>
+    <h2>Message streaming with <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="http://strimzi.io/">Strimzi</a></h2>
     <div class="columns">
       <div>
         <p>
@@ -124,9 +124,9 @@ inner_template: none
       <div>
         <nav class="links">
           <a href="https://kafka.apache.org/quickstart">Get started</a>
-          <a href="https://hub.docker.com/r/strimzi/kafka/">Container image</a>
+          <a href="https://kafka.apache.org/quickstart">Get started on OpenShift</a>
           <a href="https://kafka.apache.org/downloads">Download</a>
-          <a href="">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq-streams">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -160,7 +160,7 @@ inner_template: none
           <a href="">Container image</a>
           <a href="http://qpid.apache.org/packages.html">Linux packages</a>
           <a href="http://qpid.apache.org/download.html#messaging-servers">Download</a>
-          <a href="">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
       </div>
     </div>
@@ -176,7 +176,7 @@ inner_template: none
           {{lipsum_15}}
         </p>
         <p>
-          <a href="https://kafka.apache.org/intro" class="nav">Learn more</a>
+          <a href="http://enmasse.io/" class="nav">Learn more</a>
         </p>
       </div>
       <div>
@@ -192,7 +192,7 @@ inner_template: none
           <a href="">Get started</a>
           <a href="">Container image</a>
           <a href="http://enmasse.io/downloads">Download</a>
-          <a href="">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
       </div>
     </div>
