@@ -1,6 +1,6 @@
 ---
 title: Home
-inner_template: none
+body_template: none
 ---
 
 <header>
@@ -16,12 +16,16 @@ inner_template: none
     </div>
   </div>
 </header>
+
 <section id="-intro-section">
   <div>
     <h1>Messaging for modern applications</h1>
-    <p>
-      {{lipsum_10}}
-    </p>
+
+    <p><a id="-product-link"
+    href="https://access.redhat.com/products/red-hat-amq">Red Hat
+    AMQ</a> is powered by open source messaging.  Learn how you can
+    use its components to add messaging to your application.</p>
+    
     <div id="-features-2">
       <ul>
         <li>Messaging at internet scale</li>
@@ -91,8 +95,8 @@ inner_template: none
       </div>
       <div>
         <nav class="links">
-          <a href="">Get started</a>
-          <a href="">Container image</a>
+          <a href="">Get started with Docker</a>
+          <a href="{{site_url}}/activemq-artemis/getting-started/openshift/index.html">Get started with OpenShift</a>
           <a href="https://activemq.apache.org/artemis/download.html">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
@@ -123,8 +127,8 @@ inner_template: none
       </div>
       <div>
         <nav class="links">
-          <a href="https://kafka.apache.org/quickstart">Get started</a>
-          <a href="https://kafka.apache.org/quickstart">Get started on OpenShift</a>
+          <a href="">Get started with Docker</a>
+          <a href="">Get started on OpenShift</a>
           <a href="https://kafka.apache.org/downloads">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq-streams">Red Hat support</a>
         </nav>
@@ -156,8 +160,8 @@ inner_template: none
       </div>
       <div>
         <nav class="links">
-          <a href="http://qpid.apache.org/releases/qpid-dispatch-1.2.0/user-guide/index.html#getting-started">Get started</a>
-          <a href="">Container image</a>
+          <a href="">Get started with Docker</a>
+          <a href="">Get started on OpenShift</a>
           <a href="http://qpid.apache.org/packages.html">Linux packages</a>
           <a href="http://qpid.apache.org/download.html#messaging-servers">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
@@ -189,8 +193,7 @@ inner_template: none
       </div>
       <div>
         <nav class="links">
-          <a href="">Get started</a>
-          <a href="">Container image</a>
+          <a href="">Get started on OpenShift</a>
           <a href="http://enmasse.io/downloads">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
@@ -227,7 +230,7 @@ inner_template: none
         </nav>
       </div>
       <div>
-        <h3>JMS</h3>
+        <h3>Java (JMS)</h3>
         
         <p>A pure-Java JMS 2.0 implementation.</p>
 

@@ -251,8 +251,16 @@ section#-intro-section {
     border: none;
 }
 
+section#-intro-section a {
+    color: inherit;
+}
+
 section#-intro-section h1 {
     font-size: 3em;
+}
+
+section#-intro-section p {
+    max-width: 28em;
 }
 
 section#-intro-section > div {
@@ -264,6 +272,7 @@ section#-intro-section > div {
 section#-intro-section > div > p {
     font-size: 1.4em;
     font-weight: 300;
+    line-height: 1.4em;
 }
 
 #-features {
@@ -283,6 +292,10 @@ header > div {
     align-items: center;
 }
 
+header a, footer a {
+    color: inherit;
+}
+
 #-features > div {
     background-color: #444;
     padding: 1.5em 2em;
@@ -295,8 +308,7 @@ header > div {
 
 #-features-2 {
     display: flex;
-    align-items: top;
-    margin: 2.5em 0 1em 0;
+    margin: 2em 0 1em 0;
 }
 
 #-features-2 > ul {
@@ -334,4 +346,12 @@ header > div {
 
 #-features-2 > nav > a:last-child {
     margin-bottom: 0;
+}
+
+#-product-link {
+    font-weight: 400;
+}
+
+li > *:last-child {
+    margin-bottom: 1em;
 }
