@@ -22,23 +22,36 @@ body_template: none
     <h1>Messaging for modern applications</h1>
 
     <p><a id="-product-link"
-    href="https://access.redhat.com/products/red-hat-amq">Red Hat
-    AMQ</a> is powered by open source messaging.  Learn how you can
-    use its components to add messaging to your application.</p>
-    
-    <div id="-features-2">
-      <ul>
-        <li>Messaging at internet scale</li>
-        <li>Top-tier security and performance</li>
-        <li>Broad platform and language support</li>
-        <li>Focused on standards</li>
-      </ul>
-      <nav>
-        <a href="">Watch the video</a>
-        <a href="">Learn more</a>
-      </nav>
+      href="https://access.redhat.com/products/red-hat-amq">AMQ</a> is
+      powered by open source messaging.  Learn how you can use its
+      components to build modern applications with an event-driven
+      architecture.</p>
+
+    <div id="-component-toc">
+      <div>
+        <h1>Messaging services</h1>
+
+        <nav>
+          <a>Apache ActiveMQ Artemis</a>
+          <a>Apache Kafka and Strimzi</a>
+          <a>Apache Qpid Dispatch</a>
+          <a>EnMasse</a>
+        </nav>
+      </div>
+      <div>
+        <h1>Messaging APIs</h1>
+
+        <nav>
+          <a>C++</a>
+          <a>Java (JMS)</a>
+          <a>JavaScript</a>
+          <a>.NET</a>
+          <a>Python</a>
+          <a>Ruby</a>
+        </nav>
+      </div>
     </div>
-      
+
     <!-- <div id="-features"> -->
     <!--   <div> -->
     <!--     <h3>Messaging at internet scale</h3> -->
@@ -74,7 +87,7 @@ body_template: none
 
 <section id="-broker-section">
   <div>
-    <h2>Enterprise messaging with <a href="https://activemq.apache.org/artemis/">Apache ActiveMQ Artemis</a></h2>
+    <h1>Enterprise messaging with <a href="https://activemq.apache.org/artemis/">Apache ActiveMQ Artemis</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -96,7 +109,7 @@ body_template: none
       <div>
         <nav class="links">
           <a href="">Get started with Docker</a>
-          <a href="{{site_url}}/activemq-artemis/getting-started/openshift/index.html">Get started with OpenShift</a>
+          <a href="https://github.com/amq-io/hello-world-jms-openshift">Get started with Kubernetes</a>
           <a href="https://activemq.apache.org/artemis/download.html">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
@@ -107,7 +120,7 @@ body_template: none
 
 <section id="-kafka-section">
   <div>
-    <h2>Message streaming with <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="http://strimzi.io/">Strimzi</a></h2>
+    <h1>Event streaming with <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="http://strimzi.io/">Strimzi</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -128,7 +141,7 @@ body_template: none
       <div>
         <nav class="links">
           <a href="">Get started with Docker</a>
-          <a href="">Get started on OpenShift</a>
+          <a href="">Get started with Kubernetes</a>
           <a href="https://kafka.apache.org/downloads">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq-streams">Red Hat support</a>
         </nav>
@@ -139,7 +152,7 @@ body_template: none
 
 <section id="-router-section">
   <div>
-    <h2>Build messaging networks with <a href="http://qpid.apache.org/components/dispatch-router/index.html">Apache Qpid Dispatch</a></h2>
+    <h1>Build messaging networks with <a href="http://qpid.apache.org/components/dispatch-router/index.html">Apache Qpid Dispatch</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -161,7 +174,7 @@ body_template: none
       <div>
         <nav class="links">
           <a href="">Get started with Docker</a>
-          <a href="">Get started on OpenShift</a>
+          <a href="">Get started with Kubernetes</a>
           <a href="http://qpid.apache.org/packages.html">Linux packages</a>
           <a href="http://qpid.apache.org/download.html#messaging-servers">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
@@ -173,7 +186,7 @@ body_template: none
 
 <section id="-enmasse-section">
   <div>
-    <h2>Cloud-based messaging with <a href="http://http://enmasse.io/">EnMasse</a></h2>
+    <h1>Cloud-native messaging with <a href="http://http://enmasse.io/">EnMasse</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -193,7 +206,7 @@ body_template: none
       </div>
       <div>
         <nav class="links">
-          <a href="">Get started on OpenShift</a>
+          <a href="">Get started with Kubernetes</a>
           <a href="http://enmasse.io/downloads">Download</a>
           <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
@@ -204,7 +217,7 @@ body_template: none
 
 <section>
   <div>
-    <h2>Clients that speak your language</h2>
+    <h1>Clients that speak your language</h1>
     <div class="columns">
       <div>
         <h3>C++</h3>
@@ -219,19 +232,8 @@ body_template: none
         </nav>
       </div>
       <div>
-        <h3>JavaScript</h3>
-        
-        <p>Runs on Node.js and in the browser.</p>
-
-        <nav class="links">
-          <a href="">Learn more</a>
-          <a href="">Get started</a>
-          <a href="">NPM package</a>
-        </nav>
-      </div>
-      <div>
         <h3>Java (JMS)</h3>
-        
+
         <p>A pure-Java JMS 2.0 implementation.</p>
 
         <nav class="links">
@@ -240,12 +242,23 @@ body_template: none
           <a href="">Maven artifact</a>
         </nav>
       </div>
+      <div>
+        <h3>JavaScript</h3>
+
+        <p>Runs on Node.js and in the browser.</p>
+
+        <nav class="links">
+          <a href="">Learn more</a>
+          <a href="">Get started</a>
+          <a href="">NPM package</a>
+        </nav>
+      </div>
     </div>
     <p/>
     <div class="columns">
       <div>
         <h3>.NET</h3>
-        
+
         <p>A lightweight, asynchronous .NET API.</p>
 
         <nav class="links">
@@ -256,7 +269,7 @@ body_template: none
       </div>
       <div>
         <h3>Python</h3>
-        
+
         <p>Supports Python 2 and 3.</p>
 
         <nav class="links">
@@ -268,7 +281,7 @@ body_template: none
       </div>
       <div>
         <h3>Ruby</h3>
-        
+
         <p>An event-driven Ruby API.</p>
 
         <nav class="links">
