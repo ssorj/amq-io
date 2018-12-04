@@ -29,25 +29,25 @@ body_template: none
 
     <div id="-component-toc">
       <div>
-        <h1>Messaging services</h1>
+        <h2>Messaging services</h2>
 
         <nav>
-          <a>Apache ActiveMQ Artemis</a>
-          <a>Apache Kafka and Strimzi</a>
-          <a>Apache Qpid Dispatch</a>
-          <a>EnMasse</a>
+          <a href="#-broker-section">Apache ActiveMQ Artemis</a>
+          <a href="#-kafka-section">Apache Kafka and Strimzi</a>
+          <a href="#-router-section">Apache Qpid Dispatch</a>
+          <a href="#-enmasse-section">EnMasse</a>
         </nav>
       </div>
       <div>
-        <h1>Messaging APIs</h1>
+        <h2>Messaging APIs</h2>
 
-        <nav>
-          <a>C++</a>
-          <a>Java (JMS)</a>
-          <a>JavaScript</a>
-          <a>.NET</a>
-          <a>Python</a>
-          <a>Ruby</a>
+        <nav class="apis">
+          <a href="#-api-section">C++</a>
+          <a href="#-api-section">Java (JMS)</a>
+          <a href="#-api-section">JavaScript</a>
+          <a href="#-api-section">.NET</a>
+          <a href="#-api-section">Python</a>
+          <a href="#-api-section">Ruby</a>
         </nav>
       </div>
     </div>
@@ -215,7 +215,7 @@ body_template: none
   </div>
 </section>
 
-<section>
+<section id="-api-section">
   <div>
     <h1>Clients that speak your language</h1>
     <div class="columns">

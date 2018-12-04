@@ -311,24 +311,33 @@ header a, footer a {
     margin: 2em 0 1em 0;
 }
 
-#-component-toc h1 {
-    font-size: 1.2em;
+#-component-toc > div {
+    width: 18em;
+}
+
+#-component-toc h2 {
+    font-size: 1.6em;
 }
 
 #-component-toc nav {
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: 300;
     list-style: none;
     padding: 0;
-    margin: 0 4em 0 0;
+    margin: 0;
 }
 
 #-component-toc nav > a {
-    margin-bottom: 1em;
+    display: block;
+    margin-bottom: 0.4em;
 }
 
 #-component-toc nav > a:last-child {
     margin-bottom: 0;
+}
+
+#-component-toc nav.apis {
+    column-count: 2;
 }
 
 /* #-features-2 > nav { */
