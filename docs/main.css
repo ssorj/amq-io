@@ -312,7 +312,7 @@ header a, footer a {
 }
 
 #-component-toc > div {
-    width: 18em;
+    width: 16em;
 }
 
 #-component-toc h2 {
@@ -336,26 +336,14 @@ header a, footer a {
     margin-bottom: 0;
 }
 
-#-component-toc nav.apis {
-    column-count: 2;
+#-component-toc-apis {
+    margin-left: 4em;
+    padding-right: 1em;
 }
 
-/* #-features-2 > nav { */
-/*     display: flex; */
-/*     flex-direction: column; */
-/*     margin: auto 0; */
-/* } */
-
-/* #-features-2 > nav > a { */
-/*     display: block; */
-/*     margin-bottom: 1.5em; */
-/*     padding: 0.8em 1em; */
-/*     background-color: #33c; */
-/*     color: white; */
-/*     font-weight: 600; */
-/*     border-radius: 0.4em; */
-/*     text-align: center; */
-/* } */
+#-component-toc-apis nav {
+    column-count: 2;
+}
 
 #-product-link {
     font-weight: 400;

@@ -28,66 +28,35 @@ body_template: none
       architecture.</p>
 
     <div id="-component-toc">
-      <div>
+      <div id="-component-toc-services">
         <h2>Messaging services</h2>
 
         <nav>
-          <a href="#-broker-section">Apache ActiveMQ Artemis</a>
-          <a href="#-kafka-section">Apache Kafka and Strimzi</a>
-          <a href="#-router-section">Apache Qpid Dispatch</a>
-          <a href="#-enmasse-section">EnMasse</a>
+          <a href="#broker">Brokered messaging</a>
+          <a href="#streaming">Event streaming</a>
+          <a href="#router">Wide-area message routing</a>
+          <a href="#self-service">Self-service messaging</a>
         </nav>
       </div>
-      <div>
+      <div id="-component-toc-apis">
         <h2>Messaging APIs</h2>
 
-        <nav class="apis">
-          <a href="#-api-section">C++</a>
-          <a href="#-api-section">Java (JMS)</a>
-          <a href="#-api-section">JavaScript</a>
-          <a href="#-api-section">.NET</a>
-          <a href="#-api-section">Python</a>
-          <a href="#-api-section">Ruby</a>
+        <nav>
+          <a href="#cpp">C++</a>
+          <a href="#java">Java (JMS)</a>
+          <a href="#javascript">JavaScript</a>
+          <a href="#dotnet">.NET</a>
+          <a href="#python">Python</a>
+          <a href="#ruby">Ruby</a>
         </nav>
       </div>
     </div>
-
-    <!-- <div id="-features"> -->
-    <!--   <div> -->
-    <!--     <h3>Messaging at internet scale</h3> -->
-
-    <!--     <p>AMQ has the tools to build multi-datacenter messaging -->
-    <!--     networks. It connects clients, brokers, and standalone -->
-    <!--     services in a seamless messaging fabric.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Broad platform and language support</h3> -->
-
-    <!--     <p>AMQ works with multiple languages and operating systems, so -->
-    <!--     your diverse application components can communicate.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Top-tier security and performance</h3> -->
-
-    <!--     <p>AMQ offers modern SSL/TLS encryption and flexible SASL -->
-    <!--     authentication. AMQ delivers fast, high-volume messaging and -->
-    <!--     class-leading JMS performance.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Focused on standards</h3> -->
-
-    <!--     <p>AMQ implements the Java JMS 1.1 and 2.0 API -->
-    <!--     specifications. Its components support the ISO-standard AMQP -->
-    <!--     1.0 and MQTT messaging protocols, as well as STOMP and -->
-    <!--     WebSocket.</p> -->
-    <!--   </div> -->
-    <!-- </div> -->
   </div>
 </section>
 
-<section id="-broker-section">
+<section id="broker">
   <div>
-    <h1>Enterprise messaging with <a href="https://activemq.apache.org/artemis/">Apache ActiveMQ Artemis</a></h1>
+    <h1>Brokered messaging with <a href="https://activemq.apache.org/artemis/">ActiveMQ Artemis</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -95,7 +64,7 @@ body_template: none
           efficient, asynchronous core.
         </p>
         <p>
-          <a href="https://activemq.apache.org/artemis/docs/latest/preface.html" class="nav">Learn more</a>
+          <a href="https://activemq.apache.org/artemis/" class="nav">Learn more</a>
         </p>
       </div>
       <div>
@@ -118,41 +87,40 @@ body_template: none
   </div>
 </section>
 
-<section id="-kafka-section">
+<section id="streaming">
   <div>
-    <h1>Event streaming with <a href="https://kafka.apache.org/">Apache Kafka</a> and <a href="http://strimzi.io/">Strimzi</a></h1>
+    <h1>Event streaming with <a href="http://strimzi.io/">Kafka and Strimzi</a></h1>
     <div class="columns">
       <div>
         <p>
-          {{lipsum_15}}
+          The Kafka event streaming platform running on Kubernetes.
         </p>
         <p>
-          <a href="https://kafka.apache.org/intro" class="nav">Learn more</a>
+          <a href="https://strimzi.io/" class="nav">Learn more</a>
         </p>
       </div>
       <div>
         <ul class="bullets">
-          <li>{{lipsum_5}}</li>
-          <li>{{lipsum_5}}</li>
-          <li>{{lipsum_5}}</li>
-          <li>{{lipsum_5}}</li>
+          <li>Highly scalable pub-sub messaging</li>
+          <li>Long-term message storage</li>
+          <li>Replayable message streams</li>
+          <li>Topic partitioning for horizontal scale</li>
         </ul>
       </div>
       <div>
         <nav class="links">
-          <a href="">Get started with Docker</a>
-          <a href="">Get started with Kubernetes</a>
-          <a href="https://kafka.apache.org/downloads">Download</a>
-          <a href="https://access.redhat.com/products/red-hat-amq-streams">Red Hat support</a>
+          <a href="https://strimzi.io/quickstarts/minikube/">Get started with Kubernetes</a>
+          <a href="https://strimzi.io/downloads">Download</a>
+          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
         </nav>
       </div>
     </div>
   </div>
 </section>
 
-<section id="-router-section">
+<section id="router">
   <div>
-    <h1>Build messaging networks with <a href="http://qpid.apache.org/components/dispatch-router/index.html">Apache Qpid Dispatch</a></h1>
+    <h1>Wide-area message routing with <a href="http://qpid.apache.org/components/dispatch-router/index.html">Qpid Dispatch</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -160,7 +128,7 @@ body_template: none
           fault-tolerant, wide-area messaging networks.
         </p>
         <p>
-          <a href="http://qpid.apache.org/releases/qpid-dispatch-1.2.0/user-guide/index.html#introduction" class="nav">Learn more</a>
+          <a href="http://qpid.apache.org/components/dispatch-router/index.html" class="nav">Learn more</a>
         </p>
       </div>
       <div>
@@ -168,7 +136,7 @@ body_template: none
           <li>Scales to very large networks</li>
           <li>Advanced routing capabilities</li>
           <li>Low latency</li>
-          <li>Connect clients, brokers, and cloud services</li>
+          <li>Connects clients, brokers, and cloud services</li>
         </ul>
       </div>
       <div>
@@ -184,9 +152,9 @@ body_template: none
   </div>
 </section>
 
-<section id="-enmasse-section">
+<section id="self-service">
   <div>
-    <h1>Cloud-native messaging with <a href="http://http://enmasse.io/">EnMasse</a></h1>
+    <h1>Self-service messaging with <a href="http://enmasse.io/">EnMasse</a></h1>
     <div class="columns">
       <div>
         <p>
@@ -219,7 +187,7 @@ body_template: none
   <div>
     <h1>Clients that speak your language</h1>
     <div class="columns">
-      <div>
+      <div id="cpp">
         <h3>C++</h3>
 
         <p>A fast, native event-driven API.</p>
@@ -231,7 +199,7 @@ body_template: none
           <a href="">Windows SDK</a>
         </nav>
       </div>
-      <div>
+      <div id="java">
         <h3>Java (JMS)</h3>
 
         <p>A pure-Java JMS 2.0 implementation.</p>
@@ -242,7 +210,7 @@ body_template: none
           <a href="">Maven artifact</a>
         </nav>
       </div>
-      <div>
+      <div id="javascript">
         <h3>JavaScript</h3>
 
         <p>Runs on Node.js and in the browser.</p>
@@ -256,7 +224,7 @@ body_template: none
     </div>
     <p/>
     <div class="columns">
-      <div>
+      <div id="dotnet">
         <h3>.NET</h3>
 
         <p>A lightweight, asynchronous .NET API.</p>
@@ -267,7 +235,7 @@ body_template: none
           <a href="https://www.nuget.org/packages/amqpnetlite">NuGet package</a>
         </nav>
       </div>
-      <div>
+      <div id="python">
         <h3>Python</h3>
 
         <p>Supports Python 2 and 3.</p>
@@ -279,7 +247,7 @@ body_template: none
           <a href="https://pypi.org/project/python-qpid-proton/">Python package</a>
         </nav>
       </div>
-      <div>
+      <div id="ruby">
         <h3>Ruby</h3>
 
         <p>An event-driven Ruby API.</p>
