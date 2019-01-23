@@ -61,41 +61,10 @@
         </nav>
       </div>
     </div>
-
-    <!-- <div id="-features"> -->
-    <!--   <div> -->
-    <!--     <h3>Messaging at internet scale</h3> -->
-
-    <!--     <p>AMQ has the tools to build multi-datacenter messaging -->
-    <!--     networks. It connects clients, brokers, and standalone -->
-    <!--     services in a seamless messaging fabric.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Broad platform and language support</h3> -->
-
-    <!--     <p>AMQ works with multiple languages and operating systems, so -->
-    <!--     your diverse application components can communicate.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Top-tier security and performance</h3> -->
-
-    <!--     <p>AMQ offers modern SSL/TLS encryption and flexible SASL -->
-    <!--     authentication. AMQ delivers fast, high-volume messaging and -->
-    <!--     class-leading JMS performance.</p> -->
-    <!--   </div> -->
-    <!--   <div> -->
-    <!--     <h3>Focused on standards</h3> -->
-
-    <!--     <p>AMQ implements the Java JMS 1.1 and 2.0 API -->
-    <!--     specifications. Its components support the ISO-standard AMQP -->
-    <!--     1.0 and MQTT messaging protocols, as well as STOMP and -->
-    <!--     WebSocket.</p> -->
-    <!--   </div> -->
-    <!-- </div> -->
   </div>
 </section>
 
-<section id="broker">
+<section id="broker" class="component">
   <div>
     <h1>Brokered messaging with <a href="https://activemq.apache.org/artemis/">ActiveMQ Artemis</a></h1>
     <div class="columns">
@@ -121,20 +90,20 @@
           <a href="">Get started with Docker</a>
           <a href="https://github.com/amq-io/hello-world-jms-openshift">Get started with Kubernetes</a>
           <a href="https://activemq.apache.org/artemis/download.html">Download</a>
-          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq#broker">Red Hat support</a>
         </nav>
       </div>
     </div>
   </div>
 </section>
 
-<section id="streaming">
+<section id="streaming" class="component">
   <div>
     <h1>Event streaming with <a href="http://strimzi.io/">Kafka and Strimzi</a></h1>
     <div class="columns">
       <div>
         <p>
-          The Kafka event streaming platform running on Kubernetes.
+          The Kafka event streaming platform adapted to run on Kubernetes.
         </p>
         <p>
           <a href="https://strimzi.io/" class="nav">Learn more</a>
@@ -152,14 +121,14 @@
         <nav class="links">
           <a href="https://strimzi.io/quickstarts/minikube/">Get started with Kubernetes</a>
           <a href="https://strimzi.io/downloads">Download</a>
-          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq#streams">Red Hat support</a>
         </nav>
       </div>
     </div>
   </div>
 </section>
 
-<section id="router">
+<section id="router" class="component">
   <div>
     <h1>Wide-area message routing with <a href="http://qpid.apache.org/components/dispatch-router/index.html">Qpid Dispatch</a></h1>
     <div class="columns">
@@ -186,22 +155,20 @@
           <a href="">Get started with Kubernetes</a>
           <a href="http://qpid.apache.org/packages.html">Linux packages</a>
           <a href="http://qpid.apache.org/download.html#messaging-servers">Download</a>
-          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq#interconnect">Red Hat support</a>
         </nav>
       </div>
     </div>
   </div>
 </section>
 
-<section id="self-service">
+<section id="self-service" class="component">
   <div>
     <h1>Self-service messaging with <a href="http://enmasse.io/">EnMasse</a></h1>
     <div class="columns">
       <div>
         <p>
-          
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-interdum orci eget metus dapibus dictum.
+          A managed, multitenant messaging service.
 
         </p>
         <p>
@@ -220,19 +187,20 @@ interdum orci eget metus dapibus dictum.
         <nav class="links">
           <a href="">Get started with Kubernetes</a>
           <a href="http://enmasse.io/downloads">Download</a>
-          <a href="https://access.redhat.com/products/red-hat-amq">Red Hat support</a>
+          <a href="https://access.redhat.com/products/red-hat-amq#online">Red Hat support</a>
         </nav>
       </div>
     </div>
   </div>
 </section>
 
-<section id="-api-section">
+<section id="-api-section" class="component">
   <div>
     <h1>Clients that speak your language</h1>
+
     <div class="columns">
       <div id="cpp">
-        <h3>C++</h3>
+        <h3><a href="">C++</a></h3>
 
         <p>A fast, native event-driven API.</p>
 
@@ -244,32 +212,32 @@ interdum orci eget metus dapibus dictum.
         </nav>
       </div>
       <div id="java">
-        <h3>Java (JMS)</h3>
+        <h3><a href="http://qpid.apache.org/components/jms/index.html">Java (JMS)</a></h3>
 
         <p>A pure-Java JMS 2.0 implementation.</p>
 
         <nav class="links">
-          <a href="">Learn more</a>
+          <a href="http://qpid.apache.org/components/jms/index.html">Learn more</a>
           <a href="">Get started</a>
           <a href="">Maven artifact</a>
         </nav>
       </div>
       <div id="javascript">
-        <h3>JavaScript</h3>
+        <h3><a href="https://github.com/amqp/rhea/blob/master/README.md">JavaScript</a></h3>
 
         <p>Runs on Node.js and in the browser.</p>
 
         <nav class="links">
-          <a href="">Learn more</a>
-          <a href="">Get started</a>
-          <a href="">NPM package</a>
+          <a href="https://github.com/amqp/rhea/blob/master/README.md">Learn more</a>
+          <a href="https://github.com/amqp/rhea/blob/master/README.md#hello-world">Get started</a>
+          <a href="https://www.npmjs.com/package/rhea">NPM package</a>
         </nav>
       </div>
     </div>
     <p/>
     <div class="columns">
       <div id="dotnet">
-        <h3>.NET</h3>
+        <h3><a href="https://github.com/Azure/amqpnetlite/blob/master/README.md">.NET</a></h3>
 
         <p>A lightweight, asynchronous .NET API.</p>
 
@@ -280,7 +248,7 @@ interdum orci eget metus dapibus dictum.
         </nav>
       </div>
       <div id="python">
-        <h3>Python</h3>
+        <h3><a href="">Python</a></h3>
 
         <p>Supports Python 2 and 3.</p>
 
@@ -292,7 +260,7 @@ interdum orci eget metus dapibus dictum.
         </nav>
       </div>
       <div id="ruby">
-        <h3>Ruby</h3>
+        <h3><a href="">Ruby</a></h3>
 
         <p>An event-driven Ruby API.</p>
 
@@ -304,7 +272,11 @@ interdum orci eget metus dapibus dictum.
         </nav>
       </div>
     </div>
-  </div>
+
+    <nav class="links">
+      <a href="https://access.redhat.com/products/red-hat-amq#clients">Red Hat support</a>
+    </nav>
+</div>
 </section>
 
 <footer>
