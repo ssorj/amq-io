@@ -105,10 +105,10 @@ class Transom:
             self.site_url = "file:{}".format(_os.path.abspath(self.output_dir))
 
         if not _is_file(self.page_template_path):
-            raise Exception("No page template found")
+            raise Exception(f"No page template found at {self.page_template_path}")
 
         if not _is_file(self.body_template_path):
-            raise Exception("No body template found")
+            raise Exception(f"No body template found at {self.body_template_path}")
 
         self.page_template = _read_file(self.page_template_path)
         self.body_template = _read_file(self.body_template_path)
@@ -212,7 +212,8 @@ class Transom:
             for file_ in self.output_files.values():
                 file_.render_output(force=force)
 
-        _os.utime(self.output_dir)
+        if _exists(self.output_dir):
+            _os.utime(self.output_dir)
 
         if watch:
             self._watch()
@@ -234,6 +235,9 @@ class Transom:
                 return True
 
             if event.name.startswith("#"):
+                return True
+
+            if _is_dir(event.pathname):
                 return True
 
             if (event.pathname.startswith(self.config_dir)):
@@ -719,11 +723,16 @@ class _HtmlInFile(_OutputFile):
     def process_input(self):
         super().process_input()
 
-        match = _html_title_regex.search(self.content)
+        self.attributes.update(self._extract_metadata())
 
-        if match:
-            self.title = match.group(2).strip()
-            self.title = _html_tag_regex.sub("", self.title)
+        try:
+            self.title = self.attributes["title"]
+        except KeyError:
+            match = _html_title_regex.search(self.content)
+
+            if match:
+                self.title = match.group(2).strip()
+                self.title = _html_tag_regex.sub("", self.title)
 
     def render_output(self, force=False):
         if self.modified() or force:
@@ -732,6 +741,21 @@ class _HtmlInFile(_OutputFile):
             self._apply_template()
             self._replace_variables()
             self._save_output()
+
+    def _extract_metadata(self):
+        attributes = dict()
+
+        if self.content.startswith("---\n"):
+            end = self.content.index("---\n", 4)
+            lines = self.content[4:end].strip().split("\n")
+
+            for line in lines:
+                key, value = line.split(":", 1)
+                attributes[key.strip()] = value.strip()
+
+            self.content = self.content[end + 4:]
+
+        return attributes
 
 class _InFile(_OutputFile):
     __slots__ = ()
@@ -862,6 +886,9 @@ class TransomCommand(_commandant.Command):
 
         self.lib.init()
 
+        if self.args.init_only:
+            _sys.exit(0)
+
     def run(self):
         self.args.func()
 
@@ -879,6 +906,9 @@ class TransomCommand(_commandant.Command):
             self.notice("Creating '{}'", to_path)
 
         config_dir = _join(self.args.input_dir, "_transom")
+
+        if self.args.init_only:
+            _sys.exit(0)
 
         copy("page.html", _join(config_dir, "page.html"))
         copy("body.html", _join(config_dir, "body.html"))
@@ -912,7 +942,7 @@ class TransomCommand(_commandant.Command):
         missing_files, extra_files = self.lib.check_files()
 
         if extra_files != 0:
-            self.warn("{} files missing in the output", extra_files)
+            self.warn("{} extra files in the output", extra_files)
 
         if missing_files == 0:
             print("PASSED")
